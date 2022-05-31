@@ -1,0 +1,28 @@
+<h2>Edit Movie</h2>
+<br />
+<form action="/drones/<%= toUpdateDrone.id %>/edit" method="POST">
+  <label>
+    Name:
+    <input type="text" value="<%= toUpdateDrone.name %>" name="name" />
+  </label>
+  <br />
+  <label>
+    Propellers:
+    <input
+      type="number"
+      value="<%= toUpdateDrone.propellers %>"
+      name="propellers"
+    />
+  </label>
+  <br />
+  <label>
+    Maximum Speed:
+    <input
+      type="number"
+      value="<%= toUpdateDrone.maxSpeed %>"
+      name="maxSpeed"
+    />
+  </label>
+  <br />
+  <button type="submit">Update</button>
+</form>

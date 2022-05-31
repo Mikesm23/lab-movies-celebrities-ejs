@@ -1,0 +1,14 @@
+<h2><%- details.title %></h2>
+<div>
+  <p>Genre: <%- details.genre %></p>
+  <p>Plot: <%- details.plot %></p>
+  <p>Cast: <% details.cast.forEach(castPerson => { %> <%= castPerson.name %></p>
+  <% }) %>
+</div>
+<form action="/movies/<%= details.id %>/delete" method="POST">
+  <button type="submit">Delete</button>
+</form>
+<br />
+<a href="/movies">See all Movies</a>
+<br />
+<a href="/movies/create">Insert a new Movie</a>

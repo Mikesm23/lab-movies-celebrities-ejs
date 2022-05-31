@@ -1,0 +1,14 @@
+<h2>All Movies</h2>
+<% listMovies.forEach(movie => { %>
+<div>
+  <p>Title: <%= movie.title %></p>
+  <p>Genre: <%= movie.genre %></p>
+  <p>Plot: <%= movie.plot %></p>
+  <p>Cast: <% movie.cast.forEach(castPerson => { %> <%= castPerson.name %></p>
+  <% }) %>
+  <a href="/movies/<%= movie.id %>/details">See details</a>
+</div>
+<br />
+<% }) %>
+<br />
+<a href="/movies/create">Insert a new Movie</a>
